@@ -1,1 +1,19 @@
-
+Creating a Pipeline Using Jenkins In Azure Cloud
+====================================================
+1) Launch the Ubuntu 20 Version open the Port 8080 in NSG
+2) Launch the Centos and Open the Port 80 in NSG and Install a Httpd Package
+3) In Ubuntu Machine Install the Jenkins and Git 
+   sudo apt update
+   sudo apt install fontconfig openjdk-17-jre
+   java -version
+   sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian/jenkins.io-2023.key
+    echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  sudo apt-get update
+  sudo apt-get install jenkins
+  sudo apt install git
+4) Browse the Jenkins server Pubblicip with port 8080
+5) Install the jenkins with the credentials
+6) 
