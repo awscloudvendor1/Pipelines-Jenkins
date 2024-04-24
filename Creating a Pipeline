@@ -1,0 +1,18 @@
+Creating a CI/CD Pipeline Via Jenkins
+========================================
+1) Launch EC2 Instance and Install Jenkins and git
+2) Launch EC2 instance and Install Apache web server
+3) Keep the PHP Pipeline Project in the Github
+4) Goto jenkins and create a FreeStyle Project
+5) Goto Jenkins and select the plugins and install publish Over SSH
+6) Goto ManageJenkins ---> select configure system ---> go down and select the publish over ssh option ---> Add the EC2 Webserver Privatekey --> Provide the Username --> Provide the Hostname ---> 
+   Remote Directory (/var/www/html/) ---> Test configuration
+7) Select the Project ---> Select the Project URL (Copy paste the GitHub Project URL) ---> Select the Source Code Management (Attach the Github Https Link) ---> Select the Branch ---> Select
+   GitHub Hook Trigger Scm Polling ---> Add the WebHook in the Github Project (Copy the Jenkins Publicip and Port URL and Paste)
+8) Select the Option Send files execute commands over SSH after the build runs ---> SSH Server (Select the Server)--->
+   SourceFiles (**/*html,**/*css,**/*php ---> Select te Remote Directory Give (/) ---> save and Apply
+9) Go to the EC2 WebServer and Provide the Permissions /var/www/html ---> Provide the chmod -R html--->
+   ls-l
+10) Build the Jenkins and then jenkins will buid the Pipeline and Create a CI/CD Pipeline Between
+    Github and WebServer
+11) Try to modify the Project and Check the Jenkins send those changes via Pipeline to webserver
